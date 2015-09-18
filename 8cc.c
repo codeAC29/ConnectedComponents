@@ -194,10 +194,10 @@ int connectedComponent(int *image, int* coordinates, int height, int width) {
                     }
                 }
             }
-            *((coordinates+(labelCount-1)*4) + 0) = minC + 1;
-            *((coordinates+(labelCount-1)*4) + 1) = minR + 1;
-            *((coordinates+(labelCount-1)*4) + 2) = maxC + 1;
-            *((coordinates+(labelCount-1)*4) + 3) = maxR + 1;
+            *((coordinates+(labelCount-1)*4) + 0) = minC;
+            *((coordinates+(labelCount-1)*4) + 1) = minR;
+            *((coordinates+(labelCount-1)*4) + 2) = maxC;
+            *((coordinates+(labelCount-1)*4) + 3) = maxR;
         }
 
         return (labelArr[currentLabel-1]);
