@@ -14,7 +14,7 @@ Here,
 
 * `height` and `width` is the height and width of the input binary image respectively.
 
-This script also returns number of detected labels. The input binary image should also be **zero-padded** and the values in `coordinates` are NOT for this padded image (you do not need to do `coordinates - 1`).
+This script also returns number of detected labels. The input binary image should also be **zero-padded** and the values in `coordinates` are NOT for this padded image (you do not need to re-evaluate and do `coordinates - 1`).
 
 In order to generate the binary file Makefile can be used. Type the following command:
 ```
@@ -31,8 +31,8 @@ if you wish to delete the generated `.so` and `.o` files.
 
 Let the binary image be:
 
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| - | - | - | - | - | - | - | - |
+|   0  |   0   |   0   |   0   |   0   |   0   |   0   |   0   |
+| ---- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | **0**| **0** | **1** | **0** | **0** | **1** | **1** | **0** |
 | **0**| **1** | **1** | **0** | **0** | **0** | **1** | **0** |
 | **0**| **0** | **1** | **1** | **0** | **1** | **1** | **0** |
@@ -40,8 +40,8 @@ Let the binary image be:
 
 Then the updated binary image will be:
 
-| 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| - | - | - | - | - | - | - | - |
+| 0    | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| ---- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | **0**| **0** | **1** | **0** | **0** | **2** | **2** | **0** |
 | **0**| **1** | **1** | **0** | **0** | **0** | **2** | **0** |
 | **0**| **0** | **1** | **1** | **0** | **2** | **2** | **0** |
@@ -50,5 +50,5 @@ Then the updated binary image will be:
 Moreover, variable `coordinates` will have the values:
 
 | 1 | 1 | 3 | 3 |
-| - | - | - | - |
+| ---- | ----- | ----- | ----- |
 | **5**| **1** | **6** | **3** |
