@@ -1,0 +1,8 @@
+#Files
+*.t7
+*.sw*
+*.so
+*.o
+*.mp4
+.DS_Store
+*.*~
