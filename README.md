@@ -3,7 +3,7 @@
 
 File 8cc.c is a C-script which finds 8-connected components in a given binary image using the traditional 2-pass algorithm. The function definition is as follows:
 
-```
+```C
 int connectedComponent(int *outputMaskPointer, int *coordinates, int height, int width)
 ```
 Here,
@@ -47,7 +47,7 @@ Then the updated binary image will be:
 | **0**| **0** | **1** | **1** | **0** | **2** | **2** | **0** |
 | **0**| **0** | **0** | **0** | **0** | **0** | **0** | **0** |
 
-Moreover, variable `coordinates` will have the values:
+Moreover, variable `coordinates` will have the following values:
 
 | 1 | 1 | 3 | 3 |
 | ---- | ----- | ----- | ----- |
